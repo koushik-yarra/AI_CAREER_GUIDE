@@ -40,7 +40,7 @@ export default function DashboardPage() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h1 className="text-3xl font-bold tracking-tight font-headline">Welcome to CareerCompass AI</h1>
+        <h1 className="text-3xl font-bold tracking-tight font-headline">Welcome to Career Guide AI</h1>
         <p className="text-muted-foreground">Your central hub for AI-powered career development tools.</p>
       </div>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

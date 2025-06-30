@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import MainLayout from '@/components/layout/main-layout';
 
 export const metadata: Metadata = {
-  title: 'CareerCompass AI',
+  title: 'Career Guide AI',
   description: 'Your AI-powered guide to navigating your career path.',
 };
 
