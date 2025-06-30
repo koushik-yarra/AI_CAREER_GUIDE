@@ -1,1 +1,6 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/interview-prep-tool.ts';
+import '@/ai/flows/career-path-navigator.ts';
+import '@/ai/flows/resume-refiner.ts';
