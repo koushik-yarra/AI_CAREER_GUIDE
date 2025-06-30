@@ -91,7 +91,7 @@ export async function saveProfile(data: Profile): Promise<ProfileFormState> {
   
   try {
     await connection.query(
-      '
+      `
       INSERT INTO profiles (id, name, email, education, skills, interests, background)
       VALUES (1, ?, ?, ?, ?, ?, ?)
       ON DUPLICATE KEY UPDATE
@@ -101,7 +101,7 @@ export async function saveProfile(data: Profile): Promise<ProfileFormState> {
         skills = VALUES(skills),
         interests = VALUES(interests),
         background = VALUES(background)
-      ',
+      `,
       [name, email, education, skills, interests, background]
     );
     
