@@ -3,12 +3,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Lightbulb, FileText, LayoutDashboard, Library, MessageSquare, Route, User } from 'lucide-react';
+import { Lightbulb, FileText, LayoutDashboard, Library, MessageSquare, Route, User, BookOpen } from 'lucide-react';
 import { SidebarProvider, Sidebar, SidebarTrigger, SidebarHeader, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarInset } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/courses', label: 'Courses', icon: BookOpen },
   { href: '/resume-refiner', label: 'Resume Refiner', icon: FileText },
   { href: '/career-path-navigator', label: 'Career Path Navigator', icon: Route },
   { href: '/interview-prep', label: 'Interview Prep Tool', icon: MessageSquare },
@@ -18,6 +19,7 @@ const navItems = [
 
 export default function MainLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const currentNavItem = navItems.slice().reverse().find((item) => pathname.startsWith(item.href));
 
   return (
     <SidebarProvider>
@@ -52,7 +54,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
         <header className="sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background/80 px-4 backdrop-blur-sm md:px-6">
           <SidebarTrigger className="md:hidden" />
           <h1 className="text-lg font-semibold md:text-xl font-headline">
-            {navItems.find((item) => item.href === pathname)?.label || 'Career Guide AI'}
+            {currentNavItem?.label || 'Career Guide AI'}
           </h1>
         </header>
         <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>
