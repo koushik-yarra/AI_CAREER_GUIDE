@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Target, Package, BookText, ClipboardList, Search } from 'lucide-react';
+import { Target, Package, BookText, ClipboardList, Search, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AssignmentPage() {
@@ -80,16 +80,79 @@ export default function AssignmentPage() {
               <ClipboardList className="h-6 w-6 text-primary" />
               <h2 className="text-2xl font-semibold font-headline">Your Task</h2>
             </div>
-            <ol className="list-decimal list-inside space-y-2">
-              <li>
-                <strong>Choose a Use Case:</strong>
-                <p className="pl-6">Pick a simple problem that an AI Agent can help with. Example:</p>
-                 <ul className="list-disc list-inside mt-2 space-y-1 pl-10">
-                    <li>&quot;AI Agent to suggest daily writing prompts for bloggers.&quot;</li>
-                    <li>&quot;AI Agent to help students revise for an exam.&quot;</li>
-                 </ul>
-              </li>
-            </ol>
+            <div className="space-y-6">
+                <div className="flex gap-4">
+                    <div className="text-lg font-bold text-primary pt-1">1.</div>
+                    <div>
+                        <h3 className="text-lg font-semibold">Choose a Use Case</h3>
+                        <p className="mt-1 text-muted-foreground">Pick a simple problem that an AI Agent can help with. Example:</p>
+                        <ul className="list-disc list-inside mt-2 space-y-1 pl-4 text-muted-foreground">
+                            <li>&quot;AI Agent to suggest daily writing prompts for bloggers.&quot;</li>
+                            <li>&quot;AI Agent to help students revise for an exam.&quot;</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="flex gap-4">
+                    <div className="text-lg font-bold text-primary pt-1">2.</div>
+                    <div>
+                        <h3 className="text-lg font-semibold">Design the 4 Layers of Prompts</h3>
+                        <p className="mt-1 text-muted-foreground">For your use case, create prompts for:</p>
+                        <ul className="list-disc list-inside mt-2 space-y-1 pl-4 text-muted-foreground">
+                            <li><strong>Input Understanding</strong> (What is the user asking?)</li>
+                            <li><strong>State Tracker</strong> (What context/state is remembered?)</li>
+                            <li><strong>Task Planner</strong> (What steps does the agent take?)</li>
+                            <li><strong>Output Generator</strong> (How does it respond clearly?)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                    <div className="text-lg font-bold text-primary pt-1">3.</div>
+                    <div>
+                        <h3 className="text-lg font-semibold flex items-center gap-2">
+                            <Lightbulb className="h-5 w-5 text-yellow-400" />
+                            Use Reference Documents
+                        </h3>
+                        <p className="mt-1 text-muted-foreground">Use the reference documents to guide you. You can modify the prompts or create your own.</p>
+                    </div>
+                </div>
+                
+                <div className="flex gap-4">
+                    <div className="text-lg font-bold text-primary pt-1">4.</div>
+                    <div>
+                        <h3 className="text-lg font-semibold">Iterate & Build with ChatGPT</h3>
+                        <p className="mt-1 text-muted-foreground">Use your prompts inside ChatGPT.</p>
+                        <ul className="list-disc list-inside mt-2 space-y-1 pl-4 text-muted-foreground">
+                            <li>Ask follow-up questions if the output is not as expected.</li>
+                            <li>Keep improving your prompts and logic step-by-step.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div className="flex gap-4">
+                    <div className="text-lg font-bold text-primary pt-1">5.</div>
+                    <div>
+                        <h3 className="text-lg font-semibold">Submit an Approach Document</h3>
+                        <p className="mt-1 text-muted-foreground">This is the most important part. Your document should include:</p>
+                        <ul className="list-disc list-inside mt-2 space-y-1 pl-4 text-muted-foreground">
+                            <li>Your chosen use case.</li>
+                            <li>Prompts for each of the 4 steps.</li>
+                            <li>Snapshots or text logs of your ChatGPT interactions.</li>
+                            <li>What you learned, where you got stuck, and how you overcame it.</li>
+                            <li>Any code samples or system messages if generated.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="flex gap-4 items-start">
+                    <div className="text-lg font-bold text-primary pt-1">6.</div>
+                    <div>
+                        <h3 className="text-lg font-semibold">Journal Your Journey</h3>
+                        <p className="mt-1 text-muted-foreground">Think of this as a journal of your journey with ChatGPT.</p>
+                    </div>
+                </div>
+            </div>
           </section>
 
         </CardContent>
