@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Target, Package, BookText, ClipboardList, Search, Lightbulb, FileText } from 'lucide-react';
+import { Target, Package, BookText, ClipboardList, Search, Lightbulb, FileText, Layers, ClipboardCheck } from 'lucide-react';
 import Link from 'next/link';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
@@ -72,6 +72,107 @@ export default function AssignmentPage() {
                 <Link href="#" className="ml-2 text-primary hover:underline">Reference Here</Link>
               </li>
             </ol>
+          </section>
+
+          <Separator />
+
+          <section>
+            <div className="flex items-center gap-3 mb-4">
+              <Layers className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-semibold font-headline">Advanced Reference: 5-Layer AI System Stack</h2>
+            </div>
+            <p className="mb-4 text-muted-foreground">
+              For a more detailed approach, consider this 5-layer stack for designing robust AI systems.
+            </p>
+
+            <h3 className="text-xl font-semibold mt-6 mb-3">Adapted 5-Layer Stack for AI Systems</h3>
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-[15%]">Layer</TableHead>
+                    <TableHead className="w-[42.5%]">Classic System</TableHead>
+                    <TableHead className="w-[42.5%]">AI System (Adapted)</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-semibold">L1: Intent Stack</TableCell>
+                    <TableCell>UX goals, emotional needs, product beliefs</TableCell>
+                    <TableCell><strong>Intelligence Intent Stack:</strong> Reasoning goals, success criteria, belief shifts the AI must induce</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L2: Interaction Ontology</TableCell>
+                    <TableCell>Event-response map</TableCell>
+                    <TableCell><strong>Cognitive Flow Ontology:</strong> User cue → model decision point → feedback loop</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L3: Functional Contracts</TableCell>
+                    <TableCell>
+                        <p>Preconditions → function → postconditions</p>
+                        <p className="text-xs text-muted-foreground mt-1">Inputs → reasoning prompt → output schema → fallback plan</p>
+                    </TableCell>
+                    <TableCell><strong>Inference Contracts:</strong></TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L4: Signature Map</TableCell>
+                    <TableCell>
+                        <p>Routes, controllers, DB schemas</p>
+                        <p className="text-xs text-muted-foreground mt-1">LLM function names, tool calls, context templates, cache keys</p>
+                    </TableCell>
+                    <TableCell><strong>Model/Tool Signature Map:</strong></TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L5: Code Layer</TableCell>
+                    <TableCell>Final HTML/CSS/API/DB</TableCell>
+                    <TableCell></TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+            <Card className="mt-4 bg-muted/50 border-dashed">
+                <CardContent className="p-4">
+                    <p><strong>Reasoning Engine Layer:</strong> Prompt scaffolds, scoring hooks, evaluation wrappers, real-time validators</p>
+                </CardContent>
+            </Card>
+
+            <div className="flex items-center gap-3 mt-8 mb-3">
+               <ClipboardCheck className="h-6 w-6 text-green-600" />
+               <h3 className="text-xl font-semibold">Adapted Prompt Library Outputs</h3>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-[15%]">Layer</TableHead>
+                    <TableHead className="w-[85%]">AI Artifact</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell className="font-semibold">L1</TableCell>
+                    <TableCell>User Belief Goal, Agent Persona, Risk Constraint</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L2</TableCell>
+                    <TableCell>Input → AI decision → user re-confirmation (loop map)</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L3</TableCell>
+                    <TableCell>Reasoning Prompt, Model Config, Fallback, Evaluator</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L4</TableCell>
+                    <TableCell>Model Signature: prompt name, input template ID, function chain</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell className="font-semibold">L5</TableCell>
+                    <TableCell>Execution: Prompt + Parser + Validator + Logs + Cache</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
           </section>
 
           <Separator />
