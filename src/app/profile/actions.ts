@@ -1,25 +1,9 @@
 'use server';
 
-import { z } from 'zod';
 import pool from '@/lib/db';
 import { revalidatePath } from 'next/cache';
 import type { RowDataPacket } from 'mysql2';
-
-export const profileSchema = z.object({
-  name: z.string().min(1, { message: 'Full Name is required.' }),
-  email: z.string().email({ message: 'Please enter a valid email.' }),
-  education: z.string().optional(),
-  skills: z.string().optional(),
-  interests: z.string().optional(),
-  background: z.string().optional(),
-});
-
-export type Profile = z.infer<typeof profileSchema>;
-
-export type ProfileFormState = {
-  message: string;
-  errors?: Record<keyof Profile, string[]> | null;
-};
+import { profileSchema, type Profile, type ProfileFormState } from './schema';
 
 async function initializeDatabase() {
   const connection = await pool.getConnection();
