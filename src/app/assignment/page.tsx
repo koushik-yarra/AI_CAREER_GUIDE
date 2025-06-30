@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Target, Package, BookText, ClipboardList, Search, Lightbulb } from 'lucide-react';
+import { Target, Package, BookText, ClipboardList, Search, Lightbulb, FileText } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AssignmentPage() {
@@ -152,6 +152,89 @@ export default function AssignmentPage() {
                         <p className="mt-1 text-muted-foreground">Think of this as a journal of your journey with ChatGPT.</p>
                     </div>
                 </div>
+            </div>
+          </section>
+
+          <Separator />
+
+          <section>
+            <div className="flex items-center gap-3 mb-4">
+              <FileText className="h-6 w-6 text-primary" />
+              <h2 className="text-2xl font-semibold font-headline">Submission Format</h2>
+            </div>
+            <p className="italic text-muted-foreground mb-6">
+              Note: This document is both your journal and artifact of thought. We&apos;re evaluating how you think, build, and debug, not just what you build.
+            </p>
+
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 1: BASIC DETAILS</h3>
+                <div className="space-y-4 text-muted-foreground mt-4 ml-4">
+                    <p><strong>Name:</strong></p>
+                    <p><strong>AI Agent Title / Use Case:</strong> (e.g., AI Agent to help college students generate daily journaling prompts)</p>
+                </div>
+              </div>
+              
+              <div>
+                  <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 2: PROBLEM FRAMING</h3>
+                  <ul className="list-none space-y-4 mt-4 ml-4">
+                      <li>
+                          <strong>1.1. What problem does your AI Agent solve?</strong>
+                          <p className="pl-6 text-sm text-muted-foreground">(Write 2-3 lines to describe the user problem and context)</p>
+                      </li>
+                      <li>
+                          <strong>1.2. Why is this agent useful?</strong>
+                          <p className="pl-6 text-sm text-muted-foreground">(Describe the core value delivered to the user)</p>
+                      </li>
+                      <li>
+                          <strong>1.3. Who is the target user?</strong>
+                          <p className="pl-6 text-sm text-muted-foreground">(Be specific - &quot;college student revising for an exam&quot;, &quot;freelance writer&quot;, etc.)</p>
+                      </li>
+                      <li>
+                          <strong>1.4. What not to include?</strong>
+                          <p className="pl-6 text-sm text-muted-foreground">(Optional, but useful. Mention features you consciously avoided for scope discipline)</p>
+                      </li>
+                  </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 3: 4-LAYER PROMPT DESIGN</h3>
+                <p className="text-muted-foreground my-4">Create a subsection for each of the 4 components of the agent architecture:</p>
+                <div className="space-y-6 ml-4">
+                  <div>
+                    <h4 className="font-semibold text-lg">3.1 Input Understanding</h4>
+                    <ul className="list-disc list-inside space-y-2 mt-2 text-muted-foreground pl-4">
+                      <li><strong>Prompt:</strong> (What did you write in ChatGPT?)</li>
+                      <li><strong>What is this prompt responsible for?</strong> (1-2 lines)</li>
+                      <li><strong>Example Input + Output:</strong> (Optional if tested)</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">3.2 State Tracker</h4>
+                    <ul className="list-disc list-inside space-y-2 mt-2 text-muted-foreground pl-4">
+                      <li><strong>Prompt:</strong></li>
+                      <li>How does this help the agent &quot;remember&quot;?</li>
+                      <li>Did you simulate memory with variables / system messages? If yes, how?</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">3.3 Task Planner</h4>
+                    <ul className="list-disc list-inside space-y-2 mt-2 text-muted-foreground pl-4">
+                      <li><strong>Prompt:</strong></li>
+                      <li>What steps does your agent take internally to solve the problem?</li>
+                      <li>Did you use chaining? Branching? How did you manage complexity?</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-lg">3.4 Output Generator</h4>
+                    <ul className="list-disc list-inside space-y-2 mt-2 text-muted-foreground pl-4">
+                      <li><strong>Prompt:</strong></li>
+                      <li>What kind of output formatting or phrasing did you aim for?</li>
+                      <li>Any special behavior? (e.g., examples, markdown formatting, tone control, etc.)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
