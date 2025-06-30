@@ -74,7 +74,6 @@ To become a successful **Product Manager**, we should focus on strengthening the
     *   **Next Step:** Let's find a beginner's course on SQL or data analysis using tools like Google Analytics or Mixpanel.
 
 Would you like me to suggest some specific online courses for that first step, or would you prefer to discuss how to frame your marketing experience on your resume for a PM role?"`,
-    prompt: 'Continue the conversation.',
   });
 
   return text;
