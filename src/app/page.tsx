@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, FileText, Route, MessageSquare, User, Library, BookOpen } from "lucide-react";
+import { ArrowRight, FileText, Route, MessageSquare, User, Library, BookOpen, ClipboardCheck } from "lucide-react";
 
 const tools = [
   {
@@ -21,6 +21,12 @@ const tools = [
     description: "Generate mock interview questions and sample answers for your target role.",
     href: "/interview-prep",
     icon: MessageSquare
+  },
+    {
+    title: "AI Assignment",
+    description: "View the assignment to build a simple AI agent and test your skills.",
+    href: "/assignment",
+    icon: ClipboardCheck,
   },
   {
     title: "Courses",
