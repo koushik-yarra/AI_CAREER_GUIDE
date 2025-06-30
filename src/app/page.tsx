@@ -1,7 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, FileText, Route, MessageSquare, User, Library, BookOpen, ClipboardCheck } from "lucide-react";
+import { ArrowRight, FileText, Route, MessageSquare, User, Library, BookOpen, ClipboardCheck, Briefcase } from "lucide-react";
 
 const tools = [
   {
@@ -22,7 +22,13 @@ const tools = [
     href: "/interview-prep",
     icon: MessageSquare
   },
-    {
+  {
+    title: "Job Matcher",
+    description: "Analyze how well your profile matches a job description and get actionable feedback.",
+    href: "/job-matcher",
+    icon: Briefcase
+  },
+  {
     title: "AI Assignment",
     description: "View the assignment to build a simple AI agent and test your skills.",
     href: "/assignment",
