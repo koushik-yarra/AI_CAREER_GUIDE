@@ -9,15 +9,22 @@
  */
 
 import {ai} from '@/ai/genkit';
-import {profileSchema} from '@/app/profile/schema';
 import {z} from 'genkit';
+
+const userProfileSchema = z.object({
+  name: z.string().min(1, 'Name is required.'),
+  education: z.string().optional(),
+  skills: z.string().optional(),
+  interests: z.string().optional(),
+  background: z.string().optional(),
+});
 
 const JobMatcherInputSchema = z.object({
   jobDescription: z
     .string()
     .min(100, 'Job description must be at least 100 characters.')
     .describe('The full text of the job description the user wants to match against.'),
-  userProfile: profileSchema.describe("The user's professional profile, including skills, background, and interests."),
+  userProfile: userProfileSchema.describe("The user's professional profile, including skills, background, and interests."),
 });
 export type JobMatcherInput = z.infer<typeof JobMatcherInputSchema>;
 
