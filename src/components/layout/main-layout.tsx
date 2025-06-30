@@ -3,17 +3,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Lightbulb, FileText, LayoutDashboard, Library, MessageSquare, Route, User, BookOpen, Briefcase } from 'lucide-react';
+import { Lightbulb, FileText, LayoutDashboard, Library, MessageSquare, Route, User, BookOpen, BrainCircuit } from 'lucide-react';
 import { SidebarProvider, Sidebar, SidebarTrigger, SidebarHeader, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton, SidebarInset } from '@/components/ui/sidebar';
 import { Button } from '@/components/ui/button';
 
 const navItems = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/courses', label: 'Courses', icon: BookOpen },
+  { href: '/ai-guide', label: 'AI Guide', icon: BrainCircuit },
   { href: '/resume-refiner', label: 'Resume Refiner', icon: FileText },
   { href: '/career-path-navigator', label: 'Career Path Navigator', icon: Route },
   { href: '/interview-prep', label: 'Interview Prep Tool', icon: MessageSquare },
-  { href: '/job-matcher', label: 'Job Matcher', icon: Briefcase },
   { href: '/profile', label: 'Profile', icon: User },
   { href: '/resources', label: 'Resource Hub', icon: Library },
 ];

@@ -1,9 +1,15 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, FileText, Route, MessageSquare, User, Library, BookOpen, Briefcase } from "lucide-react";
+import { ArrowRight, FileText, Route, MessageSquare, User, Library, BookOpen, BrainCircuit } from "lucide-react";
 
 const tools = [
+  {
+    title: "AI Guide",
+    description: "Your personal AI career coach. Get guidance on job roles, resume feedback, and interview prep.",
+    href: "/ai-guide",
+    icon: BrainCircuit
+  },
   {
     title: "Resume Refiner",
     description: "Get AI-powered feedback to improve your resume's impact, clarity, and ATS compatibility.",
@@ -21,12 +27,6 @@ const tools = [
     description: "Generate mock interview questions and sample answers for your target role.",
     href: "/interview-prep",
     icon: MessageSquare
-  },
-  {
-    title: "Job Matcher",
-    description: "Analyze how well your profile matches a job description and get actionable feedback.",
-    href: "/job-matcher",
-    icon: Briefcase
   },
   {
     title: "Courses",
