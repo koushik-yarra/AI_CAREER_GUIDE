@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Target, Package, BookText, ClipboardList, Search, Lightbulb, FileText } from 'lucide-react';
 import Link from 'next/link';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export default function AssignmentPage() {
   return (
@@ -234,6 +235,86 @@ export default function AssignmentPage() {
                     </ul>
                   </div>
                 </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 4: CHATGPT EXPLORATION LOG</h3>
+                <p className="text-muted-foreground my-4">You may structure this as a table or bullet list. Minimum 3 meaningful iterations recommended.</p>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Attempt #</TableHead>
+                      <TableHead>Prompt Variant</TableHead>
+                      <TableHead>What Happened</TableHead>
+                      <TableHead>What You Changed</TableHead>
+                      <TableHead>Why You Changed It</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>1</TableCell>
+                      <TableCell className="font-mono text-xs">&quot;Generate journaling prompts&quot;</TableCell>
+                      <TableCell>Output too generic</TableCell>
+                      <TableCell>Added user context</TableCell>
+                      <TableCell>To make prompts more personal</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>2</TableCell>
+                      <TableCell>...</TableCell>
+                      <TableCell>...</TableCell>
+                      <TableCell>...</TableCell>
+                      <TableCell>...</TableCell>
+                    </TableRow>
+                     <TableRow>
+                      <TableCell>3</TableCell>
+                      <TableCell>...</TableCell>
+                      <TableCell>...</TableCell>
+                      <TableCell>...</TableCell>
+                      <TableCell>...</TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 5: OUTPUT TESTS (Optional but Recommended)</h3>
+                <p className="text-muted-foreground my-4">Include 2-3 sample outputs from your agent. Try edge cases.</p>
+                <ul className="list-disc list-inside space-y-4 mt-4 ml-4 text-muted-foreground">
+                    <li>
+                        <strong>Test 1: Normal input</strong>
+                        <p className="pl-6">Input: &quot;I want a journaling prompt about career confusion&quot;<br />Output: (Paste output)</p>
+                    </li>
+                    <li>
+                        <strong>Test 2: Vague input</strong>
+                        <p className="pl-6">Input: &quot;Give me something to think about&quot;<br />Output: (Paste output)</p>
+                    </li>
+                    <li>
+                        <strong>Test 3: Invalid input or challenge</strong>
+                        <p className="pl-6">Input: &quot;&quot;<br />Output: (Paste output)</p>
+                    </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 6: REFLECTION</h3>
+                <p className="text-muted-foreground my-4">Respond to each question briefly (3-5 sentences each):</p>
+                <ol className="list-decimal list-inside space-y-4 mt-4 ml-4 text-muted-foreground">
+                    <li>What was the hardest part of this assignment?</li>
+                    <li>What part did you enjoy the most?</li>
+                    <li>If given more time, what would you improve or add?</li>
+                    <li>What did you learn about ChatGPT or prompt design?</li>
+                    <li>Did you ever feel stuck? How did you handle it?</li>
+                </ol>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-3 border-b pb-2">SECTION 7: HACK VALUE (Optional)</h3>
+                <p className="text-muted-foreground my-4">Did you go beyond the brief in any way? If yes, explain in 2-3 lines.</p>
+                <ul className="list-disc list-inside space-y-2 mt-4 ml-4 text-muted-foreground">
+                    <li>Simulated multiple users?</li>
+                    <li>Added logic for memory or role play?</li>
+                    <li>Explored chaining multiple agents?</li>
+                </ul>
               </div>
             </div>
           </section>
